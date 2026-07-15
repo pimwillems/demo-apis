@@ -137,3 +137,10 @@ internal/store/id.go          Model: short unique id generator (base62)
 internal/view/view.go         View: JSON response rendering (JSON / Error)
 internal/handlers/handlers.go Controller: HTTP handlers, routing, request binding
 ```
+
+## Deployment
+
+This app is deployed together with the other demo APIs in this repo as a single
+container — see the root [`README.md`](../README.md#deployment). When deployed that way,
+these endpoints are reachable under the `/go-bookshop` prefix (e.g. `<url>/go-bookshop/books`).
+Standalone (`go run .`) is unaffected — it still serves from `/books` on `:8080`.

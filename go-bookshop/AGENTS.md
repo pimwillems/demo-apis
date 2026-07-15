@@ -9,6 +9,11 @@ webshop, built as a backend for a frontend demo (taught to students). It must st
 dependency-free — do **not** add external frameworks (no gin, echo, chi, sqlx, etc.)
 or module dependencies unless explicitly asked.
 
+This project is one of several demo APIs in the parent repo, deployed together as a
+single container behind Caddy — see `../AGENTS.md` for the shared deployment
+architecture and the convention (`PORT` env var, default `8080`) that makes that
+possible. Nothing here imports or depends on the other demo apps.
+
 ## Hard constraints
 
 - **Go 1.22+** (uses `http.Request.PathValue` and method-based `ServeMux` routing

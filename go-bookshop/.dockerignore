@@ -1,8 +1,0 @@
-.git
-.gitignore
-README.md
-AGENTS.md
-*.exe
-bookshop
-Dockerfile
-.dockerignore

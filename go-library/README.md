@@ -89,12 +89,10 @@ Requests using an unsupported method on a known path (e.g. `DELETE /books`) get 
 
 ## Deployment
 
-The repo includes a multi-stage `Dockerfile` that produces a small Alpine-based image running as a non-root user on port 8080. It is set up for [Coolify](https://coolify.io) (build pack: Dockerfile, exposed port 8080, health check `GET /health`), but works with any container platform:
-
-```sh
-docker build -t booksapi .
-docker run -p 8080:8080 booksapi
-```
+This app is deployed together with the other demo APIs in this repo as a single
+container — see the root [`README.md`](../README.md#deployment). When deployed that way,
+these endpoints are reachable under the `/go-library` prefix (e.g. `<url>/go-library/books`).
+Standalone (`go run .`) is unaffected — it still serves from `/books` on `:8080`.
 
 ## Project layout
 

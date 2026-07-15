@@ -1,7 +1,0 @@
-.git
-.claude
-CLAUDE.md
-*.md
-Dockerfile
-.dockerignore
-go-booksapi

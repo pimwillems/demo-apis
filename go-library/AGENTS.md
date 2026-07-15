@@ -6,6 +6,8 @@ Instructions for AI agents (and humans) working on this repository, plus a recor
 
 A minimal JSON REST API for books in Go. Standard library only — no web frameworks, no external dependencies. Data lives in memory and resets on restart. See `README.md` for the full endpoint documentation.
 
+This project is one of several demo APIs in the parent repo, deployed together as a single container behind Caddy — see `../AGENTS.md` for the shared deployment architecture and the convention (`PORT` env var, default `8080`) that makes that possible. Nothing here imports or depends on the other demo apps.
+
 ## How this project was built
 
 This project was created in a single Claude Code session (2026-07-11):
